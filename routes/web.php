@@ -13,6 +13,6 @@
 
 Route::get('/tasks', 'TasksController@index');
 
-Route::get('/tasks/{adfasdfjhm}', 'TasksController@show');
+Route::get('/tasks/{task}', 'TasksController@show');
 
 
