@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 
-   @include('partials.head')
+    @include('partials.head')
 
     @yield('styles')
 
@@ -10,9 +10,7 @@
 
 <body>
 
-    @include('partials.top_section')
-
-    @include('partials.main_section')
+    @yield('content')
 
     @include('partials.footer')
 
