@@ -1,27 +1,30 @@
 <!doctype html>
+
 <html lang="en">
-<head>
+    <head>
+        @include('layouts.head')
+        @yield('styles')
+    </head>
 
-    @include('partials.head')
+    <body>
+        <div class="container">
+            @include('partials.header')
+            @include('partials.top_section')
+        </div>
 
-    @yield('styles')
+        <main role="main" class="container">
+            <div class="row">
+                <div class="col-md-8 blog-main">
+                    @yield('content')
+                </div><!-- /.blog-main -->
 
-</head>
+                <aside class="col-md-4 blog-sidebar">
+                    @include('partials.sidebar')
+                </aside><!-- /.blog-sidebar -->
+            </div><!-- /.row -->
+        </main><!-- /.container -->
 
-<body>
-
-    @yield('content')
-
-    @include('partials.footer')
-
-<!-- Bootstrap core JavaScript
-================================================== -->
-<!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-
-    @yield('scripts')
-
-</body>
+        @include('partials.footer')
+        @yield('scripts')
+    </body>
 </html>

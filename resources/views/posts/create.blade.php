@@ -1,5 +1,5 @@
 @extends('layouts.master')
 
 @section('content')
-    <h1>Create</h1>
+    <h1>Post Create</h1>
 @endsection
