@@ -1,14 +1,30 @@
 <!doctype html>
-<html lang="en">
 
+<html lang="en">
     <head>
-        @include('partials.head')
+        @include('layouts.head')
         @yield('styles')
     </head>
 
     <body>
-        @yield('content')
-        @include('partials.footer')
-    </body>
+        <div class="container">
+            @include('partials.header')
+            @include('partials.top_section')
+        </div>
 
+        <main role="main" class="container">
+            <div class="row">
+                <div class="col-md-8 blog-main">
+                    @yield('content')
+                </div><!-- /.blog-main -->
+
+                <aside class="col-md-4 blog-sidebar">
+                    @include('partials.sidebar')
+                </aside><!-- /.blog-sidebar -->
+            </div><!-- /.row -->
+        </main><!-- /.container -->
+
+        @include('partials.footer')
+        @yield('scripts')
+    </body>
 </html>
