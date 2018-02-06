@@ -32,10 +32,19 @@ class PostController extends Controller
      *
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
-     */
+S     */
     public function store(Request $request)
     {
-        //
+//        Post::create([
+//           'title' => request('title'),
+//            'body' => request('body'),
+//        ]);
+        $post = New Post();
+        $post->title = request('title');
+        $post->body = request('body');
+
+        $post->save();
+
     }
 
     /**
