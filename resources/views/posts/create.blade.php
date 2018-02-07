@@ -18,6 +18,10 @@
             <textarea class="form-control" id="body" name="body" placeholder="Type your post..."></textarea>
         </div>
 
-        <button type="submit" class="btn btn-primary">Publish</button>
+        <div class="form-group">
+            <button type="submit" class="btn btn-primary">Publish</button>
+        </div>
+
+        @include('partials.errors')
     </form>
 @endsection
