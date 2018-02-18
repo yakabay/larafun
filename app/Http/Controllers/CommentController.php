@@ -9,6 +9,11 @@ use Illuminate\Http\Request;
 class CommentController extends Controller
 {
 
+    public function __costruct()
+    {
+        $this->middleware('auth')->only('store');
+    }
+
     public function store(Post $post)
     {
         $this->validate(request(), ['body' => 'required|min:2']);
