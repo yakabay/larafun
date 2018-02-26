@@ -20,6 +20,9 @@ class PostController extends Controller
      */
     public function index()
     {
+        // Display flash message
+
+
         $posts = Post::latest()->get();
 
         return view('index', compact('posts'));
@@ -47,15 +50,13 @@ S     */
             'body' => 'required'
         ]);
 
+        // Publish a Post by the User
         auth()->user()->publishPost(
             new Post(request(['title', 'body']))
         );
 
-//        Post::create([
-//            'title' => request('title'),
-//            'body' => request('body'),
-//            'user_id' => auth()->id()
-//        ]);
+        // Show the confirmation flash message
+        session()->flash('message', 'Your post has been published');
 
         return redirect('/');
     }

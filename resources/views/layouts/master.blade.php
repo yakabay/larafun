@@ -12,6 +12,8 @@
             @include('partials.top_section')
         </div>
 
+        @include('partials.flash')
+
         <main role="main" class="container">
             <div class="row">
                 <div class="col-md-8 blog-main">
