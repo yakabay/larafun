@@ -15,6 +15,7 @@ Route::get('/test', function () {
 });
 
 Route::get('/', 'PostController@index');
+Route::get('/about', 'PagesController@about');
 Route::get('/posts/create', 'PostController@create');
 Route::post('/posts', 'PostController@store');
 Route::get('/posts/{post}', 'PostController@show');

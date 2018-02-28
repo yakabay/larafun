@@ -8,7 +8,7 @@
         </h3>
     </a>
     <p class="post-meta">Posted by
-        <a href="#">{{ $post->user->name }}</a>
+        <a href="/about">{{ $post->user->name }}</a>
         on {{ $post->created_at->toFormattedDateString() }}</p>
 </div>
 <hr>
