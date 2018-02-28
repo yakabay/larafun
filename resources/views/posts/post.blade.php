@@ -1,10 +1,14 @@
-<div class="blog-post">
-    <h2 class="blog-post-title">
-        <a href="/posts/{{ $post->id }}">
+<div class="post-preview">
+    <a href="/posts/{{ $post->id }}">
+        <h2 class="post-title">
             {{ $post->title }}
-        </a>
-    </h2>
-    <p class="blog-post-meta">{{ $post->created_at->toFormattedDateString() }} by {{ $post->user->name }}</p>
-
-    <p>{{ $post->body }}</p>
-</div><!-- /.blog-post -->
+        </h2>
+        <h3 class="post-subtitle">
+            {{ $post->body }}
+        </h3>
+    </a>
+    <p class="post-meta">Posted by
+        <a href="#">{{ $post->user->name }}</a>
+        on {{ $post->created_at->toFormattedDateString() }}</p>
+</div>
+<hr>
