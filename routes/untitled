@@ -1,0 +1,6 @@
+
++-------->AppCompatTextView{id=2131230810, res-name=back_button, visibility=VISIBLE, width=164, height=105, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=true, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=android.widget.LinearLayout$LayoutParams@8812576, tag=null, root-is-layout-requested=false, has-input-connection=false, x=16.0, y=21.0, text=Cancel, input-type=0, ime-target=false, has-links=false} ****MATCHES****
+
+|
++--------->AppCompatTextView{id=2131230810, res-name=back_button, visibility=VISIBLE, width=164, height=105, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=true, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=android.widget.LinearLayout$LayoutParams@e15bc9, tag=null, root-is-layout-requested=false, has-input-connection=false, x=16.0, y=16.0, text=Cancel, input-type=0, ime-target=false, has-links=false} ****MATCHES****
+|

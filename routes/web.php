@@ -15,10 +15,17 @@ Route::get('/test', function () {
 });
 
 Route::get('/', 'PostController@index');
+Route::get('/user', function(){
+	return App\User::find(1);
+});
 Route::get('/about', 'PagesController@about');
 Route::get('/posts/create', 'PostController@create');
 Route::post('/posts', 'PostController@store');
 Route::get('/posts/{post}', 'PostController@show');
+
+Route::get('/cities', function(){
+    return App\City::all();
+});
 
 Route::post('/posts/{post}/comments', 'CommentController@store');
 
