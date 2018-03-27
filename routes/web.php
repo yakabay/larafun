@@ -24,7 +24,9 @@ Route::post('/posts', 'PostController@store');
 Route::get('/posts/{post}', 'PostController@show');
 
 Route::get('/cities', function(){
-    return App\City::all();
+    return App\City::select('cities.*', 'dreams.*')
+        ->join('dreams', 'cities.id', '=', 'dreams.city_id')
+        ->get();
 });
 
 Route::post('/posts/{post}/comments', 'CommentController@store');
