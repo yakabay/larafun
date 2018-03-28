@@ -10,4 +10,13 @@ class Dream extends Model
     {
         return $this->belongsTo(City::class);
     }
+
+    public function toArray()
+    {
+        return [
+            'id' => $this->id,
+            'title' => $this->title,
+            'body' => $this->body,
+        ];
+    }
 }
