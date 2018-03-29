@@ -3,8 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\City;
-use App\Http\Resources\City as CityResource;
-use Illuminate\Http\Request;
+use App\Http\Resources\CityCollection;
 
 class CityController extends Controller
 {
@@ -15,6 +14,6 @@ class CityController extends Controller
             ->join('dreams', 'cities.id', '=', 'dreams.city_id')
             ->get();
 
-        return CityResource::collection($citiesWithDreams);
+        return new CityCollection($citiesWithDreams);
     }
 }
