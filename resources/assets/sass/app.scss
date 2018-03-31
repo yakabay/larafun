@@ -7,6 +7,16 @@
 // Bootstrap
 @import '~bootstrap-sass/assets/stylesheets/bootstrap';
 
+// Clean-blog
+@import "mixins.scss";
+@import "global.scss";
+@import "navbar.scss";
+@import "masthead.scss";
+@import "post.scss";
+@import "contact.scss";
+@import "footer.scss";
+@import "bootstrap-overrides.scss";
+
 .navbar-laravel {
   background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
