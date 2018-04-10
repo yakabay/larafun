@@ -4,16 +4,21 @@ namespace App\Http\Controllers;
 
 use App\City;
 use App\Http\Resources\CityCollection;
+use App\Http\Resources\CityResource;
 
 class CityController extends Controller
 {
-    public function getCitiesWithDreams()
+    public function index()
     {
-        $citiesWithDreams = City::select('cities.*')
-            ->distinct()
-            ->join('dreams', 'cities.id', '=', 'dreams.city_id')
-            ->get();
+        $citiesWithDreams = City::with('dreams')->has('dreams')->get();
 
         return new CityCollection($citiesWithDreams);
+    }
+
+    public function show($id)
+    {
+        $cities = City::with('dreams')->get();
+
+        return (new CityCollection($cities))->additional(['mera' => 'mara )']);
     }
 }

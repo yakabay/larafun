@@ -27,4 +27,4 @@ Route::post('/posts/{post}/comments', 'CommentController@store');
 Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/cities', 'CityController@getCitiesWithDreams');
+
