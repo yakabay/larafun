@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\City;
 use App\Http\Resources\CityCollection;
 use App\Http\Resources\CityResource;
+use Illuminate\Http\Request;
 
 class CityController extends Controller
 {
@@ -15,10 +16,8 @@ class CityController extends Controller
         return new CityCollection($citiesWithDreams);
     }
 
-    public function show($id)
+    public function show(Request $request, City $city)
     {
-        $cities = City::with('dreams')->get();
-
-        return (new CityCollection($cities))->additional(['mera' => 'mara )']);
+        return $city;
     }
 }
