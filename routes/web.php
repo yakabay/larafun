@@ -27,4 +27,13 @@ Route::post('/posts/{post}/comments', 'CommentController@store');
 Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
+Route::get('/ss', function(){
+	$val = session(['names' => 'Yariks']);
+	// session()->flush();
+
+	return session('names', 'sorry');
+
+});
+
+
 

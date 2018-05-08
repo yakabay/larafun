@@ -35,7 +35,12 @@ class DreamController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+        'title' => 'required|min:3|max:255',
+        'body' => 'required',
+        ]);
+
+        return 
     }
 
     /**
